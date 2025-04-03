@@ -1,0 +1,37 @@
+{
+  "name": "@sarcastyx/shared-components",
+  "version": "0.0.6",
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/components.umd.cjs",
+  "module": "./dist/components.js",
+  "typings": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/components.js",
+      "require": "./dist/components.umd.cjs"
+    },
+    "./style.css": "./dist/components.css"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "rimraf dist && vite build && vue-tsc -b",
+    "types": "vue-tsc -b",
+    "preview": "vite preview"
+  },
+  "peerDependencies": {
+    "vue": "^3.5.13"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.17",
+    "@vitejs/plugin-vue": "^5.2.1",
+    "@vue/tsconfig": "^0.7.0",
+    "rimraf": "^6.0.1",
+    "typescript": "~5.7.2",
+    "vite": "^6.2.0",
+    "vite-plugin-dts": "^4.5.3",
+    "vue-tsc": "^2.2.4"
+  }
+}
